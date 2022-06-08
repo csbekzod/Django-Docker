@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  postgres-service:
+    image: postgres:12.1
+    restart: always
+    container_name: "Bekzod"
+    environment:
+      - POSTGRES_DB="blog"
+      - POSTGRES_USER="postgres"
+      - POSTGRES_PASSWORD="password"
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 8000:8000
